@@ -88,7 +88,7 @@ export const Navbar = () => {
             isExternal
             as={Link}
             className="text-sm font-normal bg-default-100"
-            href={siteConfig.links.sponsor}
+            href={siteConfig.links.github}
             startContent={<GithubIcon />}
             variant="flat"
           >
