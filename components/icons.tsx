@@ -42,12 +42,12 @@ export const Icons = {
         stroke="currentColor"
         fill="none"
         strokeLinecap="round"
-        stroke-linejoin="round"
-        stroke-dasharray="17 18"
+        strokeLinejoin="round"
+        strokeDasharray="17 18"
       >
         <path
           d="M 520 216 C 524 243 533 256 557 267 Q 654 317 497 395 Q 398 448 496 535 C 511 551 510.6667 562.6667 514 571"
-          marker-end="url(#SvgjsMarker2053)"
+          markerEnd="url(#SvgjsMarker2053)"
         ></path>
       </g>
       <defs>
@@ -67,7 +67,7 @@ export const Icons = {
   ),
   poop: (props: LucideProps) => (
     <svg {...props} viewBox="0 0 58 56">
-      <g id="Page-1" fill="none" fill-rule="evenodd">
+      <g id="Page-1" fill="none" fillRule="evenodd">
         <g id="018---Poop">
           <path
             id="Path"
