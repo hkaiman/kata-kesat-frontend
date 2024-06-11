@@ -33,6 +33,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const getCurrentYear = () => {
+    return new Date().getFullYear();
+  };
+
   return (
     <html suppressHydrationWarning lang="en">
       <head />
@@ -48,8 +52,8 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-
+            <footer className="w-full flex flex-col items-center justify-center py-3">
+              <div className="flex items-center">
                 <span className="text-default-600">Inspirasi dari</span>
                 &nbsp;
                 <LinkPreview
@@ -58,7 +62,10 @@ export default function RootLayout({
                 >
                   <p className="text-primary">profanity.dev</p>
                 </LinkPreview>{" "}
-
+              </div>
+              <div>
+                © {getCurrentYear()} - Haikal Aiman All Rights Reserved
+              </div>
             </footer>
           </div>
         </Providers>
