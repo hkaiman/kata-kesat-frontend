@@ -17,7 +17,7 @@ A web application to detect profanity word in Malay language
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/heykarlz/kata-kesat-frontend
+npx create-next-app -e https://github.com/hkaiman/kata-kesat-frontend
 ```
 ### Create a .env file and fill in the details using Upstash 
 
