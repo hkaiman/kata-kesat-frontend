@@ -31,7 +31,11 @@ export const checkProfanity = async ({ message }: { message: string }) => {
       body: JSON.stringify({ message }),
     })
 
-    await redis.incr('served-requests')
+    try {
+      await redis.incr('served-requests')
+    } catch {
+      // Ignore counter failures (e.g. missing Upstash config)
+    }
 
     const json = await res.json()
 
