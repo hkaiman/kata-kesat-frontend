@@ -15,7 +15,7 @@ const Demo = () => {
 
   const { data, mutate, isPending, error } = useMutation({
     mutationKey: ['check-profanity'],
-    mutationFn: checkProfanity,
+    mutationFn: ({ message }: { message: string }) => checkProfanity({ message }),
     onSettled: (data) => {
       if (data && 'error' in data) {
         throw new Error(data.error)
