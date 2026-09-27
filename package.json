@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run pages:build && wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
-    "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@nextui-org/button": "2.0.33",
@@ -62,8 +63,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1.13.8",
-    "vercel": "^60.1.3",
-    "wrangler": "^3.28.2"
+    "@opennextjs/cloudflare": "1.15.1",
+    "esbuild": "^0.28.2",
+    "wrangler": "^4.59.2"
   }
 }

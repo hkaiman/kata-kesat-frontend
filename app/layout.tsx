@@ -10,8 +10,6 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { LinkPreview } from "@/components/ui/Link-Preview";
 
-export const runtime = "edge";
-
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
